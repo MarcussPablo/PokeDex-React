@@ -53,7 +53,6 @@ npm install
 # Rode o projeto
 npm run dev
 🔧 Melhorias Futuras
-✅ Modal com informações detalhadas dos Pokémons
 
 🔍 Campo de busca por nome
 
