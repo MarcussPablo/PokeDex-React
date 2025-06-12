@@ -1,0 +1,794 @@
+*{
+    font-weight: bold;
+}
+.total{
+    min-height: 100vh;
+}
+:root {
+    /* Variáveis Originais */
+    --flying: rgb(183, 183, 233);
+    --fire: orangered;
+    --grass: rgb(123, 223, 161);
+    --poison: rgb(162, 0, 255);
+    --water: aqua;
+    --bug: brown;
+    --normal: #fcfcfc;
+    --electric: yellow;
+    --ground: #705714;
+    --fairy: pink;
+    --fighting: rgb(255, 40, 40); /* Atualizado para o valor usado nas classes */
+    --psychic: linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2));
+    --bugsteel:linear-gradient(0deg, brown, brown, grey, #fff, grey);
+    --normalpsychic:linear-gradient(0deg, rgb(255, 255, 255),rgb(255, 255, 255), rgb(255, 255, 255), rgb(128, 128, 2), white, rgb(128, 128, 2));
+    --waterrock:linear-gradient(0deg, aqua, lightgrey, lightgrey);
+    --steelflying:linear-gradient(0deg,rgb(183, 183, 233),rgb(183, 183, 233), grey, #fff, grey);
+    --grounddragon:linear-gradient(0deg,#705714,#705714, red, #fff, red);
+    --bugpoison:linear-gradient(0deg,brown,brown, rgb(162, 0, 255), rgb(162, 0, 255));
+    --icegrass:linear-gradient(0deg,rgb(123, 223, 161),rgb(123, 223, 161),blue, blue);
+    --psychicfighting:linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2),red, red);
+    --steeldragon:linear-gradient(grey, white, grey,red,white, red);
+    --firesteel:linear-gradient(grey, white, grey,orangered,orangered);
+    --electricbug:linear-gradient(yellow, yellow,brown,brown);
+    --grasssteel:linear-gradient(grey, white, grey,rgb(123, 223, 161),rgb(123, 223, 161));
+    --fireghost:linear-gradient(orangered, orangered, #222,#222);
+    
+    /* Novas Variáveis Adicionadas */
+    --rock: lightgrey;
+    --steel: linear-gradient(0deg, grey, white, grey);
+    --ice: blue;
+    --ghost: #222;
+    --dark: #000;
+    --dragon: linear-gradient(0deg, red, #fff, red);
+    --dragon-color: red; /* Cor base para gradientes */
+    --psychic-base-color: rgb(128, 128, 2);
+    --steelground:linear-gradient(0deg,#705714,#705714, grey, #fff, grey);
+    --iceground:linear-gradient(0deg,#705714,blue);
+    --waterdragon:linear-gradient(0deg,aqua, aqua, red, #fff, red);
+    --rockdark:linear-gradient(0deg,lightgrey,#000);
+    --psychicgrass:linear-gradient(0deg, rgb(123, 223, 161),rgb(123, 223, 161), rgb(123, 223, 161), rgb(128, 128, 2), white, rgb(128, 128, 2));
+    --watergrass:linear-gradient(rgb(123, 223, 161), aqua);
+    --grassdark:linear-gradient(rgb(123, 223, 161), #000);
+    --fightinggrass:linear-gradient( #000,red);
+    --bugground:linear-gradient(#705714,#705714,brown, brown);
+    --bugghost:linear-gradient(brown, brown,#222,#222);
+    --bugwater:linear-gradient(aqua, aqua,brown,brown);
+    --steelrock:linear-gradient(0deg, lightgrey,lightgrey, lightgrey, grey, white, grey);
+    --waterdark:linear-gradient(aqua, #000);
+    --electricseteel:linear-gradient(0deg, yellow,yellow, yellow, grey, white, grey);
+    --seteelfairy:linear-gradient(0deg, pink,pink, pink, grey, white, grey);
+    --rockgrass:linear-gradient(lightgrey, lightgrey,rgb(123, 223, 161),rgb(123, 223, 161));
+    --rockbug:linear-gradient(lightgrey, lightgrey,brown,brown);
+    --waterice:linear-gradient(aqua, aqua,blue,blue);
+    --steelpsychic:linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2), grey, white, grey);
+    --psychicdragon:linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2), red, white, red);
+    --grassground:linear-gradient(#705714, #705714,rgb(123, 223, 161),rgb(123, 223, 161));
+    --watersteel:linear-gradient(0deg, aqua,aqua, aqua, grey, white, grey);
+    --normalwater:linear-gradient(aqua, aqua,#fff,#fff);
+    --poisondark:linear-gradient(rgb(162, 0, 255), rgb(162, 0, 255),#000,#000);
+    --fightingsteel:linear-gradient(0deg, red,red, red, grey, white, grey);
+    --fightingpoison:linear-gradient(rgb(162, 0, 255), rgb(162, 0, 255),red,red);
+    --gostflying:linear-gradient(rgb(183, 183, 233),rgb(183, 183, 233),#000,#000);
+    --iceghost:linear-gradient(#222, #222,blue,blue);
+    --dragonghost:linear-gradient(red,#fff, red,#222,#222,#222);
+    --psychicfire:linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2),orangered, orangered);
+    --groundsteel:linear-gradient(0deg, #705714,#705714, grey, white, grey);
+    --fairygrass:linear-gradient(0deg,pink, pink,rgb(123, 223, 161),rgb(123, 223, 161));
+    --grounddark:linear-gradient(0deg, #705714,#705714,#000, #000);
+    --fightingdark:linear-gradient(0deg, red,red, #000, #000);
+    --normalgrass:linear-gradient(0deg,#fff, #fff,rgb(123, 223, 161),rgb(123, 223, 161));
+    --waterghost:linear-gradient(0deg,aqua, aqua, #222, #222);
+}
+
+html, body {
+    overflow-x: hidden;
+    background: #f3f3f3;
+   
+}
+
+/* --- Tipos Únicos --- */
+.flying{
+    background: var(--flying);
+}
+.fire {
+    background-color: var(--fire);
+}
+.grass {
+    background: var(--grass);
+}
+.water {
+    background-color: var(--water);
+    color: #000;
+}
+.bug {
+    background-color: var(--bug);
+}
+.normal {
+    background: var(--normal);
+    color: #000;
+}
+.poison {
+    background: var(--poison);
+}
+.electric {
+    background-color: var(--electric);
+    color: #000;
+}
+.ground {
+    background: var(--ground);
+}
+.fairy {
+    background: var(--fairy);
+}
+.fighting {
+    background-color: var(--fighting);
+}
+.psychic {
+    background: var(--psychic);
+}
+.rock {
+    background: var(--rock);
+}
+.ice {
+    background: var(--ice);
+    color: white;
+}
+.steel {
+    background: var(--steel);
+    color: white;
+}
+.dragon {
+    background: var(--dragon);
+}
+.dark {
+    background: var(--dark);
+    color: white;
+}
+
+.ghost{
+    background: #222;
+    color: whitesmoke;
+}
+
+
+/* --- Tipos Duplos --- */
+.fireflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--fire));
+}
+.grasspoison {
+    background: linear-gradient(0deg, var(--grass), var(--grass), var(--poison));
+}
+.bugpoison, .poisonbug {
+    background: var(--bugpoison);
+}
+.bugflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--bug));
+}
+.normalflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--normal));
+}
+.poisonground, .groundpoison {
+    background: linear-gradient(0deg, var(--poison), var(--poison), var(--ground));
+    color: var(--dark);
+}
+.normalfairy, .fairynormal {
+    background: linear-gradient(0deg, var(--fairy), var(--fairy), var(--normal));
+}
+.poisonflying, .flyingpoison {
+    background: linear-gradient(0deg, var(--poison), var(--poison), var(--flying));
+}
+.buggrass, .grassbug {
+    background: linear-gradient(0deg, var(--grass), var(--grass), var(--bug));
+}
+.waterfighting, .fightingwater {
+    background: linear-gradient(0deg, var(--water), var(--water), var(--fighting), var(--fighting));
+}
+.waterpoison ,.poisonwater {
+    background: linear-gradient(aqua, aqua,var(--poison), var(--poison));
+}
+.rockground, .groundrock {
+    background: linear-gradient(0deg, var(--rock), var(--rock), var(--ground));
+}
+.waterpsychic {
+    background: linear-gradient(0deg, var(--water), var(--water), var(--psychic-base-color), white, var(--psychic-base-color));
+    color: #000;
+}
+.electricsteel, .steelelectric {
+    background: var(--electricseteel)
+}
+
+.ghostpoison, .poisonghost {
+    background: linear-gradient(0deg, var(--ghost), var(--ghost), var(--poison));
+    
+}
+.grasspsychic {
+    background: linear-gradient(0deg, var(--grass), var(--grass), var(--psychic-base-color), white, var(--psychic-base-color));
+}
+.psychicfairy, .fairypsychic {
+    background: linear-gradient(0deg, var(--fairy), var(--fairy), var(--psychic-base-color), white, var(--psychic-base-color));
+}
+.icepsychic, .psychicice {
+    background: linear-gradient(0deg, var(--ice), var(--ice), var(--ice), var(--psychic-base-color), white, var(--psychic-base-color));
+    color: white;
+}
+
+.rockwater {
+    background: linear-gradient(0deg, var(--rock), var(--rock), var(--water));
+}
+.flyingrock, .rockflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--rock), var(--rock));
+}
+.flyingelectric, .electricflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--electric));
+}
+.flyingice, .iceflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--ice));
+}
+.dragonflying, .flyingdragon {
+    background: linear-gradient(0deg, var(--dragon-color), var(--dragon-color), var(--flying));
+}
+.waterelectric, .electricwater {
+    background: linear-gradient(0deg,var(--water), var(--water), var(--electric));
+}
+.fairyflying, .flyingfairy {
+    background: linear-gradient(0deg, var(--fairy), var(--flying));
+}
+.flyingpsychic, .psychicflying {
+    background: linear-gradient(0deg, var(--flying), var(--flying), var(--flying), var(--psychic-base-color), white, var(--psychic-base-color));
+}
+.waterfairy, .fairywater {
+    background: linear-gradient(var(--water), var(--fairy), var(--fairy));
+}
+.grassflying, .flyinggrass {
+    background: linear-gradient(var(--flying), var(--grass));
+}
+.waterground, .groundwater {
+    background: linear-gradient(var(--ground), var(--water));
+}
+.darkflying, .flyingdark {
+    background: linear-gradient(0deg, var(--dark), var(--dark), var(--flying));
+    color: white;
+}
+.firefighting, .fightingfire {
+    background: linear-gradient(0deg, var(--fire),var(--fire),var(--fighting), var(--fighting));
+    color: #000;
+}
+.firepsychic {
+    background: linear-gradient(0deg, var(--fire), var(--psychic-base-color), white, var(--psychic-base-color));
+}
+.fireground, .groundfire {
+    background: linear-gradient(0deg, var(--fire), var(--ground));
+}
+.fireghost {
+    background: linear-gradient(0deg, var(--fire), var(--ghost));
+    color: white;
+}
+.firedragon {
+    background: linear-gradient(0deg, var(--fire), var(--dragon-color));
+}
+.ghostdark, .darkghost {
+    background: linear-gradient(0deg, var(--ghost), #222); /* Mantido #222 por ser uma variação */
+    color: white;
+}
+.ghostfairy {
+    background: linear-gradient(0deg, var(--ghost), var(--fairy));
+    color: white;
+}
+.rockpsychic {
+    background: linear-gradient(0deg, var(--rock), var(--psychic-base-color), white);
+}
+.groundpsychic {
+    background: linear-gradient(0deg, var(--ground), var(--psychic-base-color), white);
+}
+.steelfairy, .fairysteel {
+    background: var(--seteelfairy);
+   
+}
+.steelpsychic {
+    background: linear-gradient(0deg, var(--steel), var(--psychic-base-color), white);
+    
+}
+.steelrock, .rocksteel {
+    background: var(--steelrock);
+}
+
+.dragonpsychic, .psychicdragon{
+    background: var(--psychicdragon);
+}
+.darkice {
+    background: linear-gradient(0deg, var(--dark), var(--ice));
+    color: white;
+   
+}
+.darkfire, .firedark{
+    background: linear-gradient(0deg, var(--dark), var(--fire));
+    color: orangered;
+  
+}
+.darkrock {
+    background: linear-gradient(0deg, var(--dark), var(--rock));
+
+}
+.darksteel, .steeldark {
+    background: linear-gradient(0deg, #000,#000,grey,#fff,grey);
+    color: gray;
+  
+}
+.fightingdark {
+    background: linear-gradient(0deg, var(--fighting), var(--dark));
+
+}
+.fightingsteel, .steelfighting {
+    background: var(--fightingsteel);
+    
+
+}
+.fightingpsychic {
+    background: linear-gradient(0deg, var(--fighting), var(--psychic-base-color), white);
+}
+.dragonice {
+    background: linear-gradient(0deg, var(--dragon-color), var(--ice));
+
+}
+.poisonsteel , .steelpoison{
+    background: linear-gradient(0deg, var(--poison), var(--poison), gray, #fff, grey);
+    color: #000;
+
+}
+.grassdragon {
+    background: linear-gradient(0deg, var(--grass), var(--dragon-color));
+}
+
+.bugsteel {
+    background:var(--bugsteel);
+    
+}
+.firerock, .rockfire {
+    background: linear-gradient(var(--fire), var(--rock));
+}
+.groundflying, .flyingground {
+    background: linear-gradient(0deg, var(--ground), var(--flying));
+}
+.bugfighting{
+    background: linear-gradient(0deg,var(--bug),var(--bug), var(--fighting));
+}
+.normalpsychic, .psychicnormal{
+background: var(--normalpsychic);
+}
+
+.iceground{
+    background: var(--iceground);
+    color: white;
+}
+.waterrock{
+    background: var(--waterrock);
+}
+
+.steelflying, .flyingsteel{
+    background: var(--steelflying);
+}
+.waterdragon, .dragonwater{
+    background:var(--waterdragon) ;
+}
+
+.rockdark, .darkrock{
+    background: var(--rockdark);
+}
+
+.psychicgrass, .grasspsychic{
+    background: var(--psychicgrass);
+}
+.watergrass, .grasswater{
+    background: var(--watergrass);
+}
+.darkgrass, .grassdark{
+    background: var(--grassdark);
+    color: var(--grass);
+}
+.fightinggrass, .grassfighting{
+    background: var(--fightinggrass);
+    
+}
+
+.bugground, .groundbug{
+    background: var(--bugground);
+}
+
+.bugghost, .ghostbug{
+    background: var(--bugghost);
+    color: brown;
+}
+
+.bugwater, .waterbug{
+    background: var(--bugwater);
+}
+.waterdark, .darkwater{
+    background: var(--waterdark);
+    color:var(--water);
+}
+
+.grounddragon, .dragonground{
+    background: var(--grounddragon);
+}
+
+.rockgrass, .grassrock{
+    background: var(--rockgrass);
+}
+
+.rockbug, .bugrock{
+    background: var(--rockbug);
+}
+
+.icewater,.waterice{
+    background: var(--waterice);
+}
+
+.steelpsychic, .psychicsteel{
+    background: var(--steelpsychic);
+}
+
+.grassground, .groundgrass{
+    background: var(--grassground);
+}
+
+.watersteel, .steelwater{
+    background: var(--watersteel);
+}
+
+.normalwater, .waternormal{
+    background: var(--normalwater);
+}
+
+.poisondark, .darkpoison{
+    background: var(--poisondark);
+    color: blueviolet;
+}
+
+.fightingpoison, .poisonfighting{
+    background: var(--fightingpoison);
+}
+.ghostflying,.flyingghost{
+    background: var(--gostflying);
+    color: var(--flying);
+}
+.grassice, .icegrass{
+    background: var(--icegrass);
+}
+
+.psychicfighting, .fightingpsychic{
+    background: var(--psychicfighting);
+}
+
+.iceghost, .ghostice{
+    background: var(--iceghost);
+    color: whitesmoke;
+}
+
+.electricghost, .ghostelectric{
+    background: linear-gradient(yellow, yellow, #222, #222);
+    color: yellow;
+}
+
+.steeldragon, .dragonsteel{
+    background: var(--steeldragon);
+}
+
+.firesteel, .steelfire{
+    background: var(--firesteel);
+}
+
+.ghostdragon, .dragonghost{
+    background: linear-gradient(#222, #222, #222, red, #fff, red);
+    color: #000;
+}
+.psychicfire, .firepsychic{
+    background: var(--psychicfire);
+}
+
+.groundsteel, .steelground{
+    background: var(--groundsteel);
+}
+
+.fairygrass, .grassfairy{
+    background: var(--fairygrass);
+}
+
+.grounddark, .darkground{
+    background: var(--grounddark);
+    color: black;
+}
+
+.fightingdark, .darkfighting{
+    background: var(--fightingdark);
+    color: #000;
+}
+.normalgrass, .grassnormal{
+    background: var(--normalgrass);
+}
+
+.waterghost, .ghostwater{
+    background: linear-gradient(aqua, aqua, #222, #222, #222);
+    color: #f3f3f3;
+}
+
+.electricbug, .bugelectric{
+    background: linear-gradient(yellow, yellow, var(--bug), var(--bug));
+
+}
+
+.grasssteel, .steelgrass{
+    background: linear-gradient(var(--grass), var(--grass), grey, #fff, grey);
+}
+
+.ghostfire, .fireghost{
+    background: linear-gradient(#222, #222, orangered, orangered);
+    color: #000;
+}
+
+.electricground, .groundelectric{
+    background: linear-gradient(yellow,yellow, #705714,#705714);
+}
+.groundghost, .ghostground{
+    background: linear-gradient(#222,#222,#705714,#705714);
+    color: black;
+}
+
+.darkdragon, .dragondark{
+    background: linear-gradient(red, #fff, red, #000,#000,#000);
+    color: red;
+}
+
+.bugfire, .firebug{
+    background: linear-gradient(brown, brown, orangered, orangered);
+    color: black;
+}
+
+.rockfighting, .fightingrock{
+    background: linear-gradient(red, red, lightgrey, lightgrey);
+}
+
+.electricdragon, .dragonelectric{
+    background: linear-gradient(yellow, yellow, red, #fff, red);
+}
+.normalground, .groundnormal{
+    background: linear-gradient(#fff,#705714 );
+}
+
+.firenormal, .normalfire{
+    background: linear-gradient(#fff, orangered);
+}
+
+.steelghost, .ghoststeel{
+    background: linear-gradient(#222,#222,#222, grey, #fff, grey);
+}
+.psychicdark, .darkpsychic{
+    background: linear-gradient(#000,#000,rgb(128, 128, 2), white, rgb(128, 128, 2));
+}
+
+.electricnormal, .normalelectric{
+    background: linear-gradient(var(--normal), var(--normal), var(--electric), var(--electric));
+}
+
+.poisondragon, .dragonpoison{
+    background: linear-gradient(var(--poison), var(--poison), red, white, red);
+}
+
+.rockdragon, .dragonrock{
+    background: linear-gradient(lightgrey, lightgrey,lightgrey,  red, white, red);
+}
+
+.rockice, .icerock{
+    background: linear-gradient(blue, blue, lightgrey, lightgrey);
+}
+
+.ghostgrass, .grassghost{
+    background: linear-gradient(#222, #222, var(--grass), var(--grass));
+}
+.rockfairy, .fairyrock{
+    background: linear-gradient(pink, pink, lightgrey, lightgrey);
+}
+
+.psychicghost, .ghostpsychic{
+   background: linear-gradient(#222,#222,rgb(128, 128, 2), white, rgb(128, 128, 2))
+}
+
+.fightingice, .icefighting{
+    background: linear-gradient(blue, blue, red, red);
+    color: blue;
+}
+
+.fairybug, .bugfairy{
+    background: linear-gradient(brown, brown, pink, pink);
+}
+
+.poisonfire, .firepoison{
+    background: linear-gradient(orangered, orangered, var(--poison), var(--poison));
+}
+
+.normalfighting, .fightingnormal{
+    background: linear-gradient(red, red, #fff, #fff);
+}
+.dragonnormal, .normaldragon{
+    background: linear-gradient(#fff, #fff,#fff,  red, #fff, red);
+}
+
+.dragonfighting, .fightingdragon{
+    background: linear-gradient( red, white, red,red, red, red);
+}
+
+.electricfairy, .fairyelectric{
+    background: linear-gradient(yellow, yellow, pink, pink);
+}
+
+.rockpoison, .poisonrock{
+    background: linear-gradient(var(--poison), var(--poison), lightgrey,lightgrey);
+}
+.fightingghost, .ghostfighting{
+    background: linear-gradient(#222, #222, red, red);
+    color: #000;
+}
+
+.psychicbug, .bugpsychic{
+   background: linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2),brown,brown);
+   color: #000;
+}
+
+.electricpoison, .poisonelectric{
+    background: linear-gradient(yellow, yellow, var(--poison), var(--poison));
+    color: yellow;
+}
+
+.flyingwater, .waterflying{
+    background: linear-gradient(var(--flying), var(--flying), aqua, aqua);
+}
+
+.fairydark, .darkfairy{
+    background: linear-gradient(#000, #000, pink, pink);
+    color: #000;
+}
+
+.normadark, .darknormal{
+    background: linear-gradient(#000, #000, #fff, #fff);
+    color: #000;
+}
+
+.bugice, .icebug{
+    background: linear-gradient(blue, blue, brown, brown);
+    color: #000;
+}
+
+.electricdark, .darkelectric{
+    background: linear-gradient(#000, #000, yellow, yellow);
+    color: #000;
+}
+
+.electricice, .iceelectric{
+    background: linear-gradient(blue, blue, yellow, yellow);
+    color: #000;
+}
+
+.bugdark, .darkbug{
+    background: linear-gradient(#000, #000, brown, brown);
+    color: #000;
+}
+
+.fightingelectric, .electricfighting{
+    background: linear-gradient(yellow, yellow, red, red);
+    color: #000;
+}
+
+.poisonnormal, .normalpoison{
+    background: linear-gradient(var(--poison), var(--poison),#fff, #fff);
+}
+.grassfire, .firegrass{
+    background: linear-gradient(orangered, orangered, var(--grass), var(--grass));
+    color: #000;
+}
+
+.flyingfighting, .fightingflying{
+    background: linear-gradient(var(--flying), var(--flying), red, red);
+    color: #000;
+}
+
+.fightingground, .groundfighting{
+    background: linear-gradient(var(--ground), var(--ground), red, red);
+    color: #000;
+}
+
+.rockelectric, .electricrock{
+    background: linear-gradient(yellow, yellow, lightgrey, lightgrey);
+    color: #000;
+}
+.fairyfighting, .fightingfairy{
+    background: linear-gradient(pink,pink, red,red);
+}
+
+.psychicpoison, .poisonpsychic{
+    background: linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2), var(--poison), var(--poison), var(--poison));
+    color: #000;
+}
+
+.poisonfairy, .fairypoison{
+    background: linear-gradient(pink, pink, var(--poison),var(--poison));
+}
+
+.electricfire, .fireelectric{
+    background: linear-gradient(yellow, yellow, orangered, orangered);
+}
+.electricgrass, .grasselectric{
+    background: linear-gradient(yellow,yellow, var(--grass),var(--grass));
+}
+
+.dragonfairy, .fairydragon{
+    background: linear-gradient( red, white, red,pink, pink,pink);
+}
+
+.electricpsychic, .psychicelectric{
+    background: linear-gradient(rgb(128, 128, 2), white, rgb(128, 128, 2),yellow, yellow, yellow);
+}
+
+.fairyice, .icefairy{
+    background: linear-gradient(blue, blue,pink, pink);
+}
+
+.steelice, .icesteel{
+    background: linear-gradient(gray,white,gray, blue, blue);
+}
+
+.icefire, .fireice{
+    background: linear-gradient(90deg,orangered, orangered, blue, blue);
+    color: #000;
+}
+
+.normalghost, .ghostnormal{
+    background: linear-gradient(#fff, #fff, var(--ghost), var(--ghost), var(--ghost));
+    color: white;
+}
+
+.item:hover{
+    transform:translateY(-2px) ;
+    transition: 1s ease-in-out;
+
+}
+img{
+transition: transform 1s ease-in-out;
+}
+
+.item:hover img{
+
+   transform: rotate(20deg) scale(2) ;
+    image-rendering:  pixelated;
+
+}
+
+@keyframes loading {
+    0%{
+        background-color: green;
+        transform: translateX(10px);
+    }
+
+    33%{
+        background-color: blue;
+        transform: translateX(20px);
+    }
+    66%{
+        background-color: red;
+        transform: translateX(30px);
+    }
+
+    100%{
+        background-color: green;
+        transform: translateX(10px);
+    }
+}
+
+.carregando{
+    width: 20px;
+    height: 20px;
+    animation: loading 1s infinite ;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+
+
